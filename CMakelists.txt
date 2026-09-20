@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(pattern_matching)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include_directories(include)
+
+add_executable(app_pattern_matching
+
+    apps/app_main.cpp
+
+    src/brute_force.cpp
+    src/boyer_moore.cpp
+    src/kmp.cpp
+    src/rabin_karp.cpp
+    src/benchmark.cpp
+
+)
