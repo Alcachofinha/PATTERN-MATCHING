@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pattern Matching Visualizer</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<main class="container">
+
+    <header>
+        <h1>Pattern Matching Visualizer</h1>
+
+        <p>
+            Brute Force, Boyer-Moore, KMP and Rabin-Karp
+        </p>
+    </header>
+
+
+    <section class="controls">
+
+        <div class="control-group">
+
+            <label for="modeSelect">
+                Mode
+            </label>
+
+            <select id="modeSelect">
+
+                <option value="text">
+                    Normal Text
+                </option>
+
+                <option value="dna">
+                    Bioinformatics / DNA
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="control-group">
+
+            <label for="algorithmSelect">
+                Algorithm
+            </label>
+
+            <select id="algorithmSelect">
+
+                <option value="bruteForce">
+                    Brute Force
+                </option>
+
+                <option value="boyerMoore">
+                    Boyer-Moore
+                </option>
+
+                <option
+                    value="kmp"
+                    selected
+                >
+                    KMP
+                </option>
+
+                <option value="rabinKarp">
+                    Rabin-Karp
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="control-group">
+
+            <label for="textInput">
+                Text / DNA Sequence
+            </label>
+
+            <input
+                id="textInput"
+                type="text"
+                value="ababaca"
+            >
+
+        </div>
+
+
+        <div class="control-group">
+
+            <label for="patternInput">
+                Pattern
+            </label>
+
+            <input
+                id="patternInput"
+                type="text"
+                value="abaca"
+            >
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button id="exampleButton">
+                Load Example
+            </button>
+
+            <button id="startButton">
+                Start
+            </button>
+
+            <button id="previousButton">
+                Previous
+            </button>
+
+            <button id="nextButton">
+                Next
+            </button>
+
+            <button id="autoButton">
+                Auto
+            </button>
+
+            <button id="resetButton">
+                Reset
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="visualization">
+
+        <h2 id="textTitle">
+            Text
+        </h2>
+
+        <div
+            id="textRow"
+            class="character-row"
+        ></div>
+
+
+        <h2>Pattern</h2>
+
+        <div class="pattern-container">
+
+            <div
+                id="patternRow"
+                class="character-row pattern-row"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <section class="information">
+
+        <div class="card event-card">
+
+            <h3>Current Event</h3>
+
+            <p id="eventText">
+                Press Start to begin.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Step</h3>
+
+            <p id="stepCounter">
+                0 / 0
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Comparisons</h3>
+
+            <p id="comparisonCounter">
+                0
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section
+        id="algorithmData"
+        class="algorithm-data"
+    ></section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
